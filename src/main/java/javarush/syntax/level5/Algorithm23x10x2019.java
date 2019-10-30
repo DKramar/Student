@@ -17,10 +17,17 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class Algorithm23x10x2019 {
-    public static void main(String[]args) throws Exception{
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int maximum;
+        int maximum = 0;
+        int number;
+        int n = Integer.parseInt(reader.readLine());
 
-        System.out.println("Hello World");
+        for (int i = 0;i<n;i++){
+            number = Integer.parseInt(reader.readLine());
+            if(i==0)maximum = number;
+            maximum = number>maximum?number:maximum;
+        }
+        System.out.println(maximum);
     }
 }
