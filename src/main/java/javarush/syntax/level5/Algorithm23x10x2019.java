@@ -21,6 +21,6 @@ public class Algorithm23x10x2019 {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int maximum;
 
-        System.out.println("Hi");
+        System.out.println("Hello World");
     }
 }
