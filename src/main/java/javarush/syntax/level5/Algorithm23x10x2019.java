@@ -19,8 +19,8 @@ import java.io.InputStreamReader;
 public class Algorithm23x10x2019 {
     public static void main(String[]args) throws Exception{
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int maximum = ;
+        int maximum;
 
-        System.out.println(maximum);
+        System.out.println("Hi");
     }
 }
