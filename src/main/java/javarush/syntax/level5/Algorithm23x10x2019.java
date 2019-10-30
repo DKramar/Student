@@ -23,10 +23,10 @@ public class Algorithm23x10x2019 {
         int number;
         int n = Integer.parseInt(reader.readLine());
 
-        for (int i = 0;i<n;i++){
+        for (int i = 0; i < n; i++) {
             number = Integer.parseInt(reader.readLine());
-            if(i==0)maximum = number;
-            maximum = number>maximum?number:maximum;
+            if (i == 0) maximum = number;
+            maximum = number > maximum ? number : maximum;
         }
         System.out.println(maximum);
     }
