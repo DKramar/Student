@@ -16,13 +16,12 @@ public class BasisOfTheCircleConstructors15x10x2019 {
     public double y;
     public double r;
 
-    public BasisOfTheCircleConstructors15x10x2019(double x, double y, double r){
+    public BasisOfTheCircleConstructors15x10x2019(double x, double y, double r) {
         this.x = x;
         this.y = y;
         this.r = r;
     }
 
-    public static void main (String [] args){
-
+    public static void main(String[] args) {
     }
 }
