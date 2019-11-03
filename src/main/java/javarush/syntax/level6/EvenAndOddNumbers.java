@@ -24,18 +24,19 @@ public class EvenAndOddNumbers {
     public static int even;
     public static int odd;
 
-    public static void main(String[]args) throws Exception{
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("ENTER NUMBER:");
         String n = reader.readLine();
-        int n1 = Integer.parseInt(n);
 
-        int countEven;
-        int countOdd;
-        for (int i = 0; i<=n1; i++){
-            if (n1%2){
-
+        for (int i = 0; i < n.length(); i++) {
+            if ((n.charAt(i) - '0') % 2 == 0) {
+                even++;
+            } else {
+                odd++;
             }
-
         }
+        System.out.println("Even: " + even);
+        System.out.println("Odd: " + odd);
     }
 }
