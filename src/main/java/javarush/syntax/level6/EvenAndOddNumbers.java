@@ -30,7 +30,7 @@ public class EvenAndOddNumbers {
         String n = reader.readLine();
 
         for (int i = 0; i < n.length(); i++) {
-            if ((n.charAt(i) - '0') % 2 == 0) {
+            if ((n.charAt(i) - '0') % 2 == 0) { //charAt() возвращает символ из массива строки по указанному индексу.
                 even++;
             } else {
                 odd++;
