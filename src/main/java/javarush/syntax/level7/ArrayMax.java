@@ -36,8 +36,8 @@ public class ArrayMax {
 
     public static int max(int[] array) {
         int max = array[0];
-        for (int j = 0; j<array.length; j++){
-            if (array[j]>max) {
+        for (int j = 0; j < array.length; j++) {
+            if (array[j] > max) {
                 max = array[j];
             }
         }

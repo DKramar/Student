@@ -15,15 +15,15 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class ReverseOrderArray {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String [] list = new String[3];
-        for(int i = 0; i<list.length;i++){
+        String[] list = new String[10];
+        for (int i = 0; i < list.length - 2; i++) {
             list[i] = reader.readLine();
+
         }
-        for (int i = 9; i>=0; i--) {
+        for (int i = 9; i >= 0; i--) {
             System.out.println(list[i]);
         }
-
     }
 }
