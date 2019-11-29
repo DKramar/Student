@@ -26,9 +26,18 @@ public class WeExpressShorter {
             list.add(0, s);
         }
         //Возможно поможет - https://ru.stackoverflow.com/questions/634119/%d0%9f%d0%be%d0%b8%d1%81%d0%ba-%d0%b8%d0%bd%d0%b4%d0%b5%d0%ba%d1%81%d0%be%d0%b2-%d0%bc%d0%b8%d0%bd%d0%b8%d0%bc%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b3%d0%be-%d0%b8-%d0%bc%d0%b0%d0%ba%d1%81%d0%b8%d0%bc%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b3%d0%be-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d0%be%d0%b2-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%b0
+        int minLenght = list.get(0).length();
+        int j = 0;
         for (int i = 0; i < list.size(); i++) {
-            int j = list.get(i).length();
-            System.out.println(j);
+            if (minLenght > list.get(i).length()){
+                minLenght = list.get(i).length();
+                //j=0;
+                //listMin.clear();
+            }
+            /*if(j<min){
+                min = list.get(i);
+            }*/
+            System.out.println();
         }
     }
 }
