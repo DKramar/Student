@@ -15,7 +15,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class InTheStartOfTheList {
+public class InTheStartOfTheListArrayList {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));// ввод данных с клавиатуры.
         ArrayList<String> list = new ArrayList<String>(); //создание массива списка строк
