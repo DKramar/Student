@@ -16,7 +16,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class LongestLineArrayList {
+public class ArrayList2LongestLine {
     private static ArrayList<String> strings;
 
     public static void main(String[] args) throws Exception {
@@ -27,7 +27,7 @@ public class LongestLineArrayList {
 
         for (int i = 0; i < 5; i++) {
             String s = reader.readLine();
-            LongestLineArrayList.strings.add(i, s); // добавил строки введенные с клавиатуры в список
+            ArrayList2LongestLine.strings.add(i, s); // добавил строки введенные с клавиатуры в список
         }
 
         //Возможно поможет - https://ru.stackoverflow.com/questions/634119/%d0%9f%d0%be%d0%b8%d1%81%d0%ba-%d0%b8%d0%bd%d0%b4%d0%b5%d0%ba%d1%81%d0%be%d0%b2-%d0%bc%d0%b8%d0%bd%d0%b8%d0%bc%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b3%d0%be-%d0%b8-%d0%bc%d0%b0%d0%ba%d1%81%d0%b8%d0%bc%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b3%d0%be-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d0%be%d0%b2-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%b0

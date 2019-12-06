@@ -15,7 +15,7 @@ package javarush.syntax.level7;
 
 import java.util.ArrayList;
 
-public class WhatKindOfListIsThisArrayList {
+public class ArrayList2WhatKindOfListIsThis {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<String>(); // объявляем переменную, инициализируем ее
         for (int i = 0; i < 1; i++) {

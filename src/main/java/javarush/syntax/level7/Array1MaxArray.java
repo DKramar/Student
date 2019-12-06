@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 
-public class ArrayMaxArray {
+public class Array1MaxArray {
     public static void main(String[] args) throws Exception {
         int[] array = initializeArray();
         int max = max(array);

@@ -17,7 +17,7 @@ package javarush.syntax.level7;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class OneBigTwoSmallArraysArray {
+public class Array1OneBigTwoSmallArrays {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int[] big = new int[4];
