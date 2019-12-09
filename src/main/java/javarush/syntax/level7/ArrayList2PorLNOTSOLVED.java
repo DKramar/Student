@@ -44,7 +44,7 @@ public class ArrayList2PorLNOTSOLVED {
     public static ArrayList<String> fix(ArrayList<String> strings) {
         //напишите тут ваш код
         for (int i = 0; i < strings.size(); ) {
-            if (strings.get(i).contains("р") ^ strings.get(i).contains("л")) {
+            if (strings.get(i).contains("р") && strings.get(i).contains("л")) {
                 if (strings.get(i).contains("р")) {
                     strings.remove(strings.get(i));
                 } else {
@@ -58,3 +58,11 @@ public class ArrayList2PorLNOTSOLVED {
         return strings;
     }
 }
+
+/*
+1. В методе fix создаём цикл for на перебор списка, шаг i++ убираем из условия цикла: for (int i = 0; i
+ < list.size(); ). Создаём 3 условия, if,else if, else:
+2. Если содержит только "р", то удаляем элемент из списка.
+3.Иначе если содержит только "л", то добавляем такой же элемент в список по этому индексу, i увеличиваем на 2: i+=2;
+4. Иначе увеличиваем i на 1: i++;
+ */
