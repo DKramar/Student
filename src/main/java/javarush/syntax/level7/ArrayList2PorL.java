@@ -28,7 +28,7 @@ package javarush.syntax.level7;
 
 import java.util.ArrayList;
 
-public class ArrayList2PorLNOTSOLVED {
+public class ArrayList2PorL {
     public static void main(String[] args) {
         ArrayList<String> strings = new ArrayList<String>();
         strings.add("роза");
@@ -44,11 +44,11 @@ public class ArrayList2PorLNOTSOLVED {
     public static ArrayList<String> fix(ArrayList<String> strings) {
         //напишите тут ваш код
         for (int i = 0; i < strings.size(); ) {
-            if (strings.get(i).contains("р") && strings.get(i).contains("л")) {
+            if (strings.get(i).contains("р") ^ strings.get(i).contains("л")) {
                 if (strings.get(i).contains("р")) {
                     strings.remove(strings.get(i));
                 } else {
-                    strings.add(i = i + 1, strings.get(i));
+                    strings.add(i, strings.get(i));
                     i += 2;
                 }
             } else {
