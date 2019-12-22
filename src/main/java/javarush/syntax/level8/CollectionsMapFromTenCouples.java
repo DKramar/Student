@@ -31,9 +31,9 @@ public class CollectionsMapFromTenCouples {
         Map<String, String> couples = new HashMap<>(); // Объяви переменную коллекции Map с типом элементов String, String и сразу проинициализируй ee.
         couples.put("арбуз", "ягода"); // Программа должна добавлять в коллекцию 10 пар строк, согласно условию.
         couples.put("банан", "трава");
-        couples.put("вишн", "ягода");
+        couples.put("вишня", "ягода");
         couples.put("груша", "фрукт");
-        couples.put("дыня", "овощь");
+        couples.put("дыня", "овощ");
         couples.put("ежевика", "куст");
         couples.put("жень-шень", "корень");
         couples.put("земляника", "ягода");
