@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class CollectionPrintMapElements {
+public class CollectionsPrintMapElements {
     public static void main(String[] args)
     {
         //все элементы хранятся в парах

@@ -17,7 +17,7 @@ Sim - 5
 import java.util.Map;
 import java.util.HashMap;
 
-public class CollectionMapFromObject {
+public class CollectionsMapFromObject {
     public static void main(String[] args) {
         Map<String, Object> map = new HashMap<>(); //
         map.put("Sim", 5);
