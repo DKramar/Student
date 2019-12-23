@@ -5,7 +5,7 @@ package javarush.syntax.level8;
 
 import java.util.Date;
 
-public class HowMuchDaysPassed {
+public class DateHowMuchDaysPassed {
     public static void main(String[] args) throws Exception {
         Date yearStartTime = new Date();
         yearStartTime.setHours(0);

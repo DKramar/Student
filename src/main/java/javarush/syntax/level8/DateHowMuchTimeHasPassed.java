@@ -5,7 +5,7 @@ package javarush.syntax.level8;
 
 import java.util.Date;
 
-public class HowMuchTimeHasPassed {
+public class DateHowMuchTimeHasPassed {
     public static void main(String[] args) throws Exception {
         Date currentTime = new Date();
         int hours = currentTime.getHours();
