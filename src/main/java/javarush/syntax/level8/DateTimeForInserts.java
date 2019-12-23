@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
-public class TimeForInserts {
+public class DateTimeForInserts {
     public static void main(String[] args) {
         System.out.println(getInsertTimeInMs(new ArrayList()));
         System.out.println(getInsertTimeInMs(new LinkedList()));
