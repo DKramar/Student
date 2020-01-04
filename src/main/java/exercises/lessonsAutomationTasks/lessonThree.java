@@ -12,7 +12,7 @@ public class lessonThree {
         int w = 8;
         int intN = q / w;
         double balance = ((double) q / w) - q / w;
-        System.out.print("1) " + q + " / " + w + " = " + intN + " и ");
+        System.out.print("TASK 1) " + q + " / " + w + " = " + intN + " и ");
         System.out.printf("%.1f", balance);
         System.out.println(" в остатке");
 
@@ -22,18 +22,18 @@ public class lessonThree {
         Создайте программу, вычисляющую и выводящую на экран сумму цифр числа n.
          */
         int n = 98;
-        int a = n % 10;
-        int b = (n / 10) % 10;
-        int c = a + b;
-        System.out.println("2) " + "Сумма цифр числа " + n + " равна: " + b + " + " + a + " = " + c);
+        int x = n % 10;
+        int y = (n / 10) % 10;
+        int z = x + y;
+        System.out.println("TASK 2) " + "Сумма цифр числа " + n + " равна: " + y + " + " + x + " = " + z);
 
         /*
         TASK 3
         В переменной n хранится вещественное число с ненулевой дробной частью.
         Создайте программу, округляющую число n до ближайшего целого и выводящую результат на экран.
          */
-        double x = 56.56;
-        System.out.println("3) " + "Число " + x + " округленное до ближайшего целого равно: " + (int) x);
+        double num = 56.56;
+        System.out.println("TASK 3) " + "Число " + num + " округленное до ближайшего целого равно: " + (int) num);
 
         /*
         TASK 4
@@ -41,10 +41,26 @@ public class lessonThree {
         в b хранилась разность старых значений c−a, а в c хранилось сумма старых значений a+b+c.
         Например, a=0, b=2, c=5, тогда новые значения a=2, b=5 и c=7.
          */
-        int a1 = 0;
-        int b1 = 2;
-        int c1 = 5;
 
+        class Change {
+            int a;
+            int b;
+            int c;
 
+            Change(int a, int b, int c) {
+                this.a = a + b;
+                this.b = c - a;
+                this.c = a + b + c;
+            }
+        }
+        int a = 0;
+        int b = 2;
+        int c = 5;
+        System.out.print("TASK 4) " + "Old data: " + "a = " + a + "; b = " + b + "; c = " + c);
+        Change change = new Change(a, b, c);
+        a = change.a;
+        b = change.b;
+        c = change.c;
+        System.out.println("  New data: " + "a = " + a + "; b = " + b + "; c = " + c);
     }
 }
