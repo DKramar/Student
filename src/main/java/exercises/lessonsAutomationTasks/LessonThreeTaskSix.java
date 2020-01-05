@@ -19,17 +19,14 @@ import java.io.InputStreamReader;
 
 public class LessonThreeTaskSix {
     public static void main(String[] args) throws Exception {
-        name();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter your name:");
+        String name = reader.readLine();
+        Hello hello = new Hello();
+        hello.setupName(name);
+
         Hello.welcome();
         System.out.println("Hello, world!");
         Hello.byeBay();
     }
-
-    public static String name() throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter your name:");
-        String name = reader.readLine();
-        return name;
-    }
-
 }

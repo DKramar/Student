@@ -13,24 +13,22 @@ byeBay() - прощается с выводом в консоль фразы "By
 
 import exercises.lessonsAutomationTasks.LessonThreeTaskSix;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 public class Hello {
-    /*public static void main(String[] args) throws Exception{
-        setupName();
-        welcome();
-        byeBay();
-    }
-    private static void setupName(String name)throws Exception{
-        String name01 = LessonThreeTaskSix.name();
+    private static String name;
+
+    public void setupName(String name) {
+        this.name = name;
     }
 
-    public static void welcome()throws Exception{
-        System.out.println("Hello, " + setupName());
+    public static String getName() {
+        return name;
     }
 
-    public static void byeBay()throws Exception{
-        System.out.println("Bye, " + setupName());
-    }*/
+    public static void welcome(){
+        System.out.println("Hello, " + getName());
+    }
+
+    public static void byeBay(){
+        System.out.println("Bye, " + getName());
+    }
 }
