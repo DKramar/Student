@@ -1,4 +1,4 @@
-package exercises.lessonsAutomationTasks;
+package exercises.lessonsAutomationTasks.lecture3;
 /*
 Создать простой Java-проект (консольное приложение), которое при запуске выводит в консоль “Hello, world!”.
 Добавить метод printHelloName(), который будет запрашивать у пользователя ввести имя,

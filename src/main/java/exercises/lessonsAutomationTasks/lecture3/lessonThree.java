@@ -1,4 +1,4 @@
-package exercises.lessonsAutomationTasks;
+package exercises.lessonsAutomationTasks.lecture3;
 
 public class lessonThree {
     public static void main(String[] args) {

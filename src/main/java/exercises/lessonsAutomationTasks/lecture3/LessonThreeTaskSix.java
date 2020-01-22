@@ -1,4 +1,4 @@
-package exercises.lessonsAutomationTasks;
+package exercises.lessonsAutomationTasks.lecture3;
 /*
 Создать еще один класс Main2 с методом main(String[] args), который при запуске выводит в консоль “Hello, world!”.
 Создать отдельный пакет ‘com.welcome’.
@@ -12,7 +12,7 @@ byeBay() - прощается с выводом в консоль фразы "By
 
  */
 
-import exercises.lessonsAutomationTasks.com.welcome.Hello;
+import exercises.lessonsAutomationTasks.lecture3.com.welcome.Hello;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
