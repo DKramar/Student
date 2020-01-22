@@ -48,7 +48,5 @@ public class Demo {
         resultDiv.numer = n1.numer * n2.denom;
         resultDiv.denom = n1.denom * n2.numer;
         System.out.println("Division: " + n1.numer + "/" + n1.denom + " / " + n2.numer + "/" + n2.denom + " = " + resultDiv.numer + "/" + resultDiv.denom);
-
-
     }
 }
