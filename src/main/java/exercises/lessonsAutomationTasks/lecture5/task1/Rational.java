@@ -20,6 +20,6 @@ Demo класс должен продемонстрировать работу �
  */
 
 public class Rational {
-    public int a;
-    public int b;
+    public int numer; // обьявил поле
+    public int denom; // обьявил поле
 }

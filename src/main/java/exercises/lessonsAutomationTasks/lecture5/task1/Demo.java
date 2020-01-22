@@ -20,4 +20,35 @@ Demo класс должен продемонстрировать работу �
  */
 
 public class Demo {
+    public static void main(String[] args) {
+        Rational n1 = new Rational(); // создал экземпляр класса
+        n1.numer = (int) (Math.random() * (10 - 2 + 1) + 2);// числитель
+        n1.denom = (int) (Math.random() * (10 - 2 + 1) + 2);// знаменатель
+
+        Rational n2 = new Rational(); // создал экземпляр класса
+        n2.numer = (int) (Math.random() * (10 - 2 + 1) + 2);// числитель
+        n2.denom = (int) (Math.random() * (10 - 2 + 1) + 2);// знаменатель
+
+        Rational resultSum = new Rational();
+        resultSum.numer = n1.numer*n2.denom + n2.numer*n1.denom;
+        resultSum.denom = n1.denom * n2.denom;
+        System.out.println("Summa: " + n1.numer + "/" + n1.denom + " + " + n2.numer + "/" + n2.denom + " = " + resultSum.numer + "/" + resultSum.denom);
+
+        Rational resultSubt = new Rational();
+        resultSubt.numer = n1.numer*n2.denom - n2.numer*n1.denom;
+        resultSubt.denom = n1.denom * n2.denom;
+        System.out.println("Subtraction: " + n1.numer + "/" + n1.denom + " - " + n2.numer + "/" + n2.denom + " = " + resultSubt.numer + "/" + resultSubt.denom);
+
+        Rational resultMult = new Rational();
+        resultMult.numer = n1.numer * n2.numer;
+        resultMult.denom = n1.denom * n2.denom;
+        System.out.println("Multiplication: " + n1.numer + "/" + n1.denom + " * " + n2.numer + "/" + n2.denom + " = " + resultMult.numer + "/" + resultMult.denom);
+
+        Rational resultDiv = new Rational();
+        resultDiv.numer = n1.numer * n2.denom;
+        resultDiv.denom = n1.denom * n2.numer;
+        System.out.println("Division: " + n1.numer + "/" + n1.denom + " / " + n2.numer + "/" + n2.denom + " = " + resultDiv.numer + "/" + resultDiv.denom);
+
+
+    }
 }
