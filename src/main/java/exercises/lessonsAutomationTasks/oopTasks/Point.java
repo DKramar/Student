@@ -4,20 +4,23 @@ public class Point {
     public int x; // обьявил ПОЛЕ x
     public int y; // обьявил ПОЛЕ y
 
-    public void setX(int x) {
-        this.x = x;
+    private int a;
+    private int b;
+
+    public void setA(int a) {
+        this.a = a;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public void setB(int b) {
+        this.b = b;
     }
 
-    public int getX() {
-        return x;
+    public int getA() {
+        return a;
     }
 
-    public int getY() {
-        return y;
+    public int getB() {
+        return b;
     }
 }
 
