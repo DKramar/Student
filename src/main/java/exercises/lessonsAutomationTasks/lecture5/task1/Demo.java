@@ -19,9 +19,11 @@ Demo класс должен продемонстрировать работу �
 создать несколько рациональных чисел, вывести их в консоль, показать выполнение всех операций с выводом результатов в консоль
  */
 
+import static exercises.lessonsAutomationTasks.lecture5.task1.Rational.concut;
+
 public class Demo {
     public static void main(String[] args) {
-        Rational n1 = new Rational(); // создал экземпляр класса. Первая дробь
+        /*Rational n1 = new Rational(); // создал экземпляр класса. Первая дробь
         n1.numer = (int) (Math.random() * (10 - 2 + 1) + 2);// числитель. Присвоил значение
         n1.denom = (int) (Math.random() * (10 - 2 + 1) + 2);// знаменатель. Присвоил значение
 
@@ -47,6 +49,10 @@ public class Demo {
         Rational resultDiv = new Rational();
         resultDiv.numer = n1.numer * n2.denom;
         resultDiv.denom = n1.denom * n2.numer;
-        System.out.println("Division: " + n1.numer + "/" + n1.denom + " / " + n2.numer + "/" + n2.denom + " = " + resultDiv.numer + "/" + resultDiv.denom);
+        System.out.println("Division: " + n1.numer + "/" + n1.denom + " / " + n2.numer + "/" + n2.denom + " = " + resultDiv.numer + "/" + resultDiv.denom);*/
+
+        System.out.println(concut(2.0 / 3,1.0 / 8));
+        System.out.println(19.0 / 24.0);
     }
+
 }

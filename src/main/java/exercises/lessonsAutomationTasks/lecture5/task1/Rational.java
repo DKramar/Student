@@ -20,6 +20,10 @@ Demo класс должен продемонстрировать работу �
  */
 
 public class Rational {
-    public int numer; // обьявил поле
-    public int denom; // обьявил поле
+/*    public int numer; // обьявил поле
+    public int denom; // обьявил поле*/
+
+    public static double concut(double a, double b) {
+        return a + b;
+    }
 }
