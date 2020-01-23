@@ -20,10 +20,95 @@ Demo класс должен продемонстрировать работу �
  */
 
 public class Rational {
-/*    public int numer; // обьявил поле
-    public int denom; // обьявил поле*/
 
-    public static double concut(double a, double b) {
-        return a + b;
+
+    public static int summaNumerator(int a, int b, int c, int d) {
+        int result;
+        if (b == 0 || d == 0) {
+            result = 0;
+        } else {
+            result = a * d + b * c;
+        }
+        return result;
+    }
+
+    public static int summaDenominator(int b, int d) {
+        int result;
+        if (b == 0 || d == 0) {
+            result = 0;
+        } else {
+            result = b * d;
+        }
+        return result;
+    }
+
+    public static int subtractionNumerator(int a, int b, int c, int d) {
+        int result;
+        if (b == 0 || d == 0) {
+            result = 0;
+        } else {
+            result = a * d - b * c;
+        }
+        return result;
+    }
+
+    public static int subtractionDenominator(int b, int d) {
+        int result;
+        if (b == 0 || d == 0) {
+            result = 0;
+        } else {
+            result = b * d;
+        }
+        return result;
+    }
+
+    public static int multiplicationNumerator(int a, int b, int c, int d) {
+        int result;
+        if (b == 0 || d == 0 || a == 0 || c == 0) {
+            result = 0;
+        } else {
+            result = a * c;
+        }
+        return result;
+    }
+
+    public static int multiplicationDenominator(int b, int d) {
+        int result;
+        if (b == 0 || d == 0) {
+            result = 0;
+        } else {
+            result = b * d;
+        }
+        return result;
+    }
+
+    public static int divisionNumerator(int a, int b, int d) {
+        int result;
+        if (b == 0 || d == 0) {
+            result = 0;
+        } else {
+            result = a * d;
+        }
+        return result;
+    }
+
+    public static int divisionDenominator(int b, int c, int d) {
+        int result;
+        if (b == 0 || d == 0) {
+            result = 0;
+        } else {
+            result = b * c;
+        }
+        return result;
+    }
+
+    public static String zero(int b, int d) {
+        String n;
+        if (b == 0 || d == 0) {
+            n = " Division by zero";
+        } else {
+            n = " ";
+        }
+        return n;
     }
 }

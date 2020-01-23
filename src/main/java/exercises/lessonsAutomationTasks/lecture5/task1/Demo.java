@@ -19,40 +19,20 @@ Demo класс должен продемонстрировать работу �
 создать несколько рациональных чисел, вывести их в консоль, показать выполнение всех операций с выводом результатов в консоль
  */
 
-import static exercises.lessonsAutomationTasks.lecture5.task1.Rational.concut;
+//import static exercises.lessonsAutomationTasks.lecture5.task1.Rational.concut;
 
 public class Demo {
     public static void main(String[] args) {
-        /*Rational n1 = new Rational(); // создал экземпляр класса. Первая дробь
-        n1.numer = (int) (Math.random() * (10 - 2 + 1) + 2);// числитель. Присвоил значение
-        n1.denom = (int) (Math.random() * (10 - 2 + 1) + 2);// знаменатель. Присвоил значение
 
-        Rational n2 = new Rational(); // создал экземпляр класса. Вторая дробь
-        n2.numer = (int) (Math.random() * (10 - 2 + 1) + 2);// числитель. Присвоил значение
-        n2.denom = (int) (Math.random() * (10 - 2 + 1) + 2);// знаменатель. Присвоил значение
+        int a = 0; /*(int) (Math.random() * (11+10)-10); // диапазон -10 до 10*/
+        int b = (int) (Math.random() * (11+10)-10);
+        int c = (int) (Math.random() * (11+10)-10);
+        int d = (int) (Math.random() * (11+10)-10);
 
-        Rational resultSum = new Rational();
-        resultSum.numer = n1.numer*n2.denom + n2.numer*n1.denom;
-        resultSum.denom = n1.denom * n2.denom;
-        System.out.println("Summa: " + n1.numer + "/" + n1.denom + " + " + n2.numer + "/" + n2.denom + " = " + resultSum.numer + "/" + resultSum.denom);
+        System.out.println(a + "/" + b + " + " + c + "/" + d + " = " + Rational.summaNumerator(a, b, c, d) + "/" + Rational.summaDenominator(b, d) + Rational.zero(b, d));
+        System.out.println(a + "/" + b + " - " + c + "/" + d + " = " + Rational.subtractionNumerator(a, b, c, d) + "/" + Rational.subtractionDenominator(b, d) + Rational.zero(b, d));
+        System.out.println(a + "/" + b + " * " + c + "/" + d + " = " + Rational.multiplicationNumerator(a, b, c, d) + "/" + Rational.multiplicationDenominator(b, d) + Rational.zero(b, d));
+        System.out.println(a + "/" + b + " / " + c + "/" + d + " = " + Rational.divisionNumerator(a, b, d) + "/" + Rational.divisionDenominator(b, c, d) + Rational.zero(b, d));
 
-        Rational resultSubt = new Rational();
-        resultSubt.numer = n1.numer*n2.denom - n2.numer*n1.denom;
-        resultSubt.denom = n1.denom * n2.denom;
-        System.out.println("Subtraction: " + n1.numer + "/" + n1.denom + " - " + n2.numer + "/" + n2.denom + " = " + resultSubt.numer + "/" + resultSubt.denom);
-
-        Rational resultMult = new Rational();
-        resultMult.numer = n1.numer * n2.numer;
-        resultMult.denom = n1.denom * n2.denom;
-        System.out.println("Multiplication: " + n1.numer + "/" + n1.denom + " * " + n2.numer + "/" + n2.denom + " = " + resultMult.numer + "/" + resultMult.denom);
-
-        Rational resultDiv = new Rational();
-        resultDiv.numer = n1.numer * n2.denom;
-        resultDiv.denom = n1.denom * n2.numer;
-        System.out.println("Division: " + n1.numer + "/" + n1.denom + " / " + n2.numer + "/" + n2.denom + " = " + resultDiv.numer + "/" + resultDiv.denom);*/
-
-        System.out.println(concut(2.0 / 3,1.0 / 8));
-        System.out.println(19.0 / 24.0);
     }
-
 }
