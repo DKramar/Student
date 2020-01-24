@@ -1,4 +1,4 @@
-package exercises.lessonsAutomationTasks.lecture5.task1.ext;
+package exercises.ext;
 
 public class Program {
     public static void main(String[] args) {

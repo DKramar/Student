@@ -1,8 +1,8 @@
 package javarush.syntax.level3;
 /*
 Вывести на экран следующий текст - две строки:
-It's Windows path: "C:\Program Files\Java\jdk1.7.0\bin"
-It's Java string: \"C:\\Program Files\\Java\\jdk1.7.0\\bin\"
+It's Windows path: "C:\Action Files\Java\jdk1.7.0\bin"
+It's Java string: \"C:\\Action Files\\Java\\jdk1.7.0\\bin\"
 
 Подсказка:
 \” – экранирование двойной кавычки;
@@ -13,13 +13,13 @@ It's Java string: \"C:\\Program Files\\Java\\jdk1.7.0\\bin\"
 Требования:
 •	Программа должна выводить текст.
 •	Должно быть выведено две строки.
-•	Текст первый строки должен быть: It's Windows path: "C:\Program Files\Java\jdk1.7.0\bin"
-•	Текст второй строки должен быть: It's Java string: \"C:\\Program Files\\Java\\jdk1.7.0\\bin\"
+•	Текст первый строки должен быть: It's Windows path: "C:\Action Files\Java\jdk1.7.0\bin"
+•	Текст второй строки должен быть: It's Java string: \"C:\\Action Files\\Java\\jdk1.7.0\\bin\"
  */
 
 public class CharacterEscapes {
     public static void main(String[] args){
-        System.out.println("It's Windows path: \"C:\\Program Files\\Java\\jdk1.7.0\\bin\"");
-        System.out.println("It's Java string: \\"+"\"C:\\" + "\\Program Files\\"+"\\Java\\"+"\\jdk1.7.0\\"+"\\bin\\"+"\"");
+        System.out.println("It's Windows path: \"C:\\Action Files\\Java\\jdk1.7.0\\bin\"");
+        System.out.println("It's Java string: \\"+"\"C:\\" + "\\Action Files\\"+"\\Java\\"+"\\jdk1.7.0\\"+"\\bin\\"+"\"");
     }
 }
