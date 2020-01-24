@@ -1,6 +1,6 @@
 package exercises.inheritance;
 
-public class Cat extends Animals{
+public class Cat extends Animal {
     public void meow (){
         System.out.println("CATS - MEOWS!");
     }
