@@ -27,24 +27,15 @@ public class Demo {
         int c = (int) (Math.random() * (11 + 10) - 10);
         int d = (int) (Math.random() * (11 + 10) - 10);
 
-        Rational summa = new Rational(a, b, c, d);
-        summa.summaResult();
+        Rational result = new Rational(a, b, c, d);
+        result.summaResult();
+        result.substractionResult();
+        result.multiplicationResult();
+        result.divisionResult();
 
-        System.out.println(summa.summaResult());
-
-        Rational substraction = new Rational(a, b, c, d);
-        substraction.substractionResult();
-
-        System.out.println(substraction.substractionResult());
-
-        Rational multiplication = new Rational(a, b, c, d);
-        multiplication.multiplicationResult();
-
-        System.out.println(multiplication.multiplicationResult());
-
-        Rational division = new Rational(a, b, c, d);
-        division.divisionResult();
-
-        System.out.println(division.divisionResult());
+        System.out.println(result.summaResult());
+        System.out.println(result.substractionResult());
+        System.out.println(result.multiplicationResult());
+        System.out.println(result.divisionResult());
     }
 }
