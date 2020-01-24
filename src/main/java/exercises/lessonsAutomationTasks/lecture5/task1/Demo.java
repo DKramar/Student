@@ -19,20 +19,34 @@ Demo класс должен продемонстрировать работу �
 создать несколько рациональных чисел, вывести их в консоль, показать выполнение всех операций с выводом результатов в консоль
  */
 
-//import static exercises.lessonsAutomationTasks.lecture5.task1.Rational.concut;
-
 public class Demo {
     public static void main(String[] args) {
 
-        int a = 0; /*(int) (Math.random() * (11+10)-10); // диапазон -10 до 10*/
+        int a = (int) (Math.random() * (11+10)-10);
         int b = (int) (Math.random() * (11+10)-10);
         int c = (int) (Math.random() * (11+10)-10);
         int d = (int) (Math.random() * (11+10)-10);
 
-        System.out.println(a + "/" + b + " + " + c + "/" + d + " = " + Rational.summaNumerator(a, b, c, d) + "/" + Rational.summaDenominator(b, d) + Rational.zero(b, d));
-        System.out.println(a + "/" + b + " - " + c + "/" + d + " = " + Rational.subtractionNumerator(a, b, c, d) + "/" + Rational.subtractionDenominator(b, d) + Rational.zero(b, d));
-        System.out.println(a + "/" + b + " * " + c + "/" + d + " = " + Rational.multiplicationNumerator(a, b, c, d) + "/" + Rational.multiplicationDenominator(b, d) + Rational.zero(b, d));
-        System.out.println(a + "/" + b + " / " + c + "/" + d + " = " + Rational.divisionNumerator(a, b, d) + "/" + Rational.divisionDenominator(b, c, d) + Rational.zero(b, d));
+        Rational summa = new Rational(a,b,c,d);
+        summa.summaNumerator();
+        summa.summaDenominator();
+
+        Rational substraction = new Rational(a,b,c,d);
+        substraction.subtractionNumerator();
+        substraction.subtractionDenominator();
+
+        Rational multiplication = new Rational(a,b,c,d);
+        multiplication.multiplicationNumerator();
+        multiplication.multiplicationDenominator();
+
+        Rational division = new Rational(a,b,c,d);
+        division.divisionNumerator();
+        division.divisionDenominator();
+
+        System.out.println(Rational.a + "/" + Rational.b + " + " + Rational.c + "/" + Rational.d + " = " + summa.summaNumerator() + "/" + summa.summaDenominator());
+        System.out.println(Rational.a + "/" + Rational.b + " - " + Rational.c + "/" + Rational.d + " = " + substraction.subtractionNumerator() + "/" + substraction.subtractionDenominator());
+        System.out.println(Rational.a + "/" + Rational.b + " * " + Rational.c + "/" + Rational.d + " = " + multiplication.multiplicationNumerator() + "/" + multiplication.multiplicationDenominator());
+        System.out.println(Rational.a + "/" + Rational.b + " / " + Rational.c + "/" + Rational.d + " = " + division.divisionNumerator() + "/" + division.divisionDenominator());
 
     }
 }

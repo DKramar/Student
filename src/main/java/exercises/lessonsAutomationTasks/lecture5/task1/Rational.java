@@ -21,8 +21,19 @@ Demo класс должен продемонстрировать работу �
 
 public class Rational {
 
+    public static int a;
+    public static int b;
+    public static int c;
+    public static int d;
 
-    public static int summaNumerator(int a, int b, int c, int d) {
+    public Rational(int a, int b, int c, int d){
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+    }
+
+    public int summaNumerator(/*int a, int b, int c, int d*/) {
         int result;
         if (b == 0 || d == 0) {
             result = 0;
@@ -32,7 +43,7 @@ public class Rational {
         return result;
     }
 
-    public static int summaDenominator(int b, int d) {
+    public int summaDenominator(/*int b, int d*/) {
         int result;
         if (b == 0 || d == 0) {
             result = 0;
@@ -42,7 +53,7 @@ public class Rational {
         return result;
     }
 
-    public static int subtractionNumerator(int a, int b, int c, int d) {
+    public int subtractionNumerator(/*int a, int b, int c, int d*/) {
         int result;
         if (b == 0 || d == 0) {
             result = 0;
@@ -52,7 +63,7 @@ public class Rational {
         return result;
     }
 
-    public static int subtractionDenominator(int b, int d) {
+    public int subtractionDenominator(/*int b, int d*/) {
         int result;
         if (b == 0 || d == 0) {
             result = 0;
@@ -62,7 +73,7 @@ public class Rational {
         return result;
     }
 
-    public static int multiplicationNumerator(int a, int b, int c, int d) {
+    public int multiplicationNumerator(/*int a, int b, int c, int d*/) {
         int result;
         if (b == 0 || d == 0 || a == 0 || c == 0) {
             result = 0;
@@ -72,7 +83,7 @@ public class Rational {
         return result;
     }
 
-    public static int multiplicationDenominator(int b, int d) {
+    public int multiplicationDenominator(/*int b, int d*/) {
         int result;
         if (b == 0 || d == 0) {
             result = 0;
@@ -82,7 +93,7 @@ public class Rational {
         return result;
     }
 
-    public static int divisionNumerator(int a, int b, int d) {
+    public int divisionNumerator(/*int a, int b, int d*/) {
         int result;
         if (b == 0 || d == 0) {
             result = 0;
@@ -92,7 +103,7 @@ public class Rational {
         return result;
     }
 
-    public static int divisionDenominator(int b, int c, int d) {
+    public int divisionDenominator(/*int b, int c, int d*/) {
         int result;
         if (b == 0 || d == 0) {
             result = 0;
@@ -102,7 +113,7 @@ public class Rational {
         return result;
     }
 
-    public static String zero(int b, int d) {
+    public String zero(/*int b, int d*/) {
         String n;
         if (b == 0 || d == 0) {
             n = " Division by zero";
