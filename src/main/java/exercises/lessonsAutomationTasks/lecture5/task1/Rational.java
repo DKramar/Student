@@ -2,46 +2,63 @@ package exercises.lessonsAutomationTasks.lecture5.task1;
 
 public class Rational {
 
-    private static int numerator;
-    private static int denominator;
-  /*  public static int c;
-    public static int d;*/
+    private static int a;
+    private static int b;
+    private static int c;
+    private static int d;
 
-    public Rational(int a, int b) {
-        this.numerator = a;
-        this.denominator = b;
+    public static void setA(int a) {
+        Rational.a = a;
     }
 
-    /*int getNumerator() {
-        return numerator;
+    public static void setB(int b) {
+        Rational.b = b;
     }
 
-    int getDenominator() {
-        return denominator;
-    }*/
-
-    public static int summaNumerator(/*Rational fraction1, Rational fraction2*/){
-        return fraction1.numerator * fraction2.denominator + fraction1.denominator * fraction2.numerator;
+    public static void setC(int c) {
+        Rational.c = c;
     }
 
-    /*public int summaNumerator(Rational fraction1, Rational fraction2) {
-        int result;
-        if (fraction1.denominator == 0 || fraction2.denominator == 0) {
+    public static void setD(int d) {
+        Rational.d = d;
+    }
+
+    public static int getA() {
+        return a;
+    }
+
+    public static int getB() {
+        return b;
+    }
+
+    public static int getC() {
+        return c;
+    }
+
+    public static int getD() {
+        return d;
+    }
+
+    public static int summaNumerator() {
+        /*int result;
+        if (b == 0 || d == 0) {
+
+        } else {
+            result = a * d + b * c;
+        }
+        return result;*/
+        return a * d + b * c;
+    }
+
+    public static int summaDenominator() {
+        /*int result;
+        if (b == 0 || d == 0) {
             result = 0;
         } else {
-            result = fraction1.numerator * fraction2.denominator + fraction1.denominator * fraction2.numerator;
+            result = b * d;
         }
-        return result;
-    }*/
-
-    private static int summaDenominator() {
-        int result;
-        if (denominator == 0 /*|| d == 0*/) {
-            result = 0;
-        } else {
-            result = denominator * denominator;
-        }
-        return result;
+        return result;*/
+        return b * d;
     }
 
     private static int subtractionNumerator(int a, int b, int c, int d) {
@@ -103,11 +120,8 @@ public class Rational {
         }
         return result;
     }
-    public static String summaResult() {
-        return summaNumerator() + "/" + summaDenominator();
-        }
 
-    /*public static String summaResult(int a, int b, int c, int d) {
+    public static String summaResult() {
         String r;
         if (b == 0 || d == 0) {
             r = a + "/" + b + " + " + c + "/" + d + " = " + "Division by zero";
@@ -115,7 +129,7 @@ public class Rational {
             r = a + "/" + b + " + " + c + "/" + d + " = " + summaNumerator() + "/" + summaDenominator();
         }
         return r;
-    }*/
+    }
 
     public static String substractionResult(int a, int b, int c, int d) {
         String r;

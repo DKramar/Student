@@ -22,24 +22,26 @@ Demo класс должен продемонстрировать работу �
 public class Demo {
     public static void main(String[] args) {
 
-       /* int a = (int) (Math.random() * (11 + 10) - 10);
+        int a = (int) (Math.random() * (11 + 10) - 10);
         int b = (int) (Math.random() * (11 + 10) - 10);
         int c = (int) (Math.random() * (11 + 10) - 10);
-        int d = (int) (Math.random() * (11 + 10) - 10);*/
+        int d = (int) (Math.random() * (11 + 10) - 10);
 
-        Rational fraction1 = new Rational(1,2);
-        Rational fraction2 = new Rational(3,4);
-        Rational fraction3 = new Rational(2,3);
+        Rational fraction1 = new Rational();
+        fraction1.setA(a);
+        fraction1.setB(b);
+
+        Rational fraction2 = new Rational();
+        fraction2.setC(c);
+        fraction2.setD(d);
 
         Rational result = new Rational();
-        result.numerator(Rational.summaNumerator());
-
-
-
+        result.summaNumerator();
+        result.summaDenominator();
         /*num1.summaNumerator(num2);*/
 
 
-        System.out.println(Rational.summaResult(fraction1,fraction2,fraction3));
+        System.out.println(a + "/" + b + " + " + c + "/" + d + " = " + result.summaNumerator() + "/" + result.summaDenominator());
 
 
         /*Rational result = new Rational(a, b, c, d);
