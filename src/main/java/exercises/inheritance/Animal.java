@@ -1,8 +1,17 @@
 package exercises.inheritance;
 
-public class Animal {
+/*public class Animal {
 
-    public void voice(){
-        System.out.println("All ANIMALS MAKE SOUNDS");
+    public int voice;
+
+    public int Animals(){
+        this.voice = voice;
     }
-}
+    public int Dovoice () {
+        if (voice % 2 != 0) {
+            cat.meow();
+        } else {
+            dog.bark();
+        }
+    }
+}*/
