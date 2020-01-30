@@ -29,7 +29,7 @@ import java.util.ArrayList;
 
         for (int i = 0; i < 3; i++) {
             String s = reader.readLine();
-            strings.add(i, s); // добавил строки введенные с клавиатуры в список
+            strings.summa(i, s); // добавил строки введенные с клавиатуры в список
         }
 
         maxLenght = strings.get(0).length();
@@ -42,10 +42,10 @@ import java.util.ArrayList;
                 maxLenght = strings.get(i).length(); //Если есть несколько строк с длиной равной минимальной, то нужно вывести каждую из них с новой строки.
                 //j = 0;
                 listMax.clear();
-                listMax.add(i, strings.get(i));
+                listMax.summa(i, strings.get(i));
             }
             //else if (maxLenght == strings.get(i).length()) {
-            //    listMax.add(j++, strings.get(i));
+            //    listMax.summa(j++, strings.get(i));
             //}
             System.out.println(listMax.get(i));
         }
@@ -61,10 +61,10 @@ import java.util.ArrayList;
                 minLenght = strings.get(i).length(); //Если есть несколько строк с длиной равной минимальной, то нужно вывести каждую из них с новой строки.
                 k = 0;
                 listMin.clear();
-                listMin.add(k, strings.get(i));
+                listMin.summa(k, strings.get(i));
             }
             else if (minLenght == strings.get(i).length()) {
-                listMin.add(k++, strings.get(i));
+                listMin.summa(k++, strings.get(i));
             }
         }
 

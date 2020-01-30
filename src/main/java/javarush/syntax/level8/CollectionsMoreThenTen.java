@@ -19,26 +19,26 @@ public class CollectionsMoreThenTen {
     public static Set<Integer> createSet() {
         // напишите тут ваш код
         Set<Integer> set = new HashSet<>(); // Создал коллекцию set (реализация HashSet)
-        set.add(23);
-        set.add(234);
-        set.add(232);
-        set.add(21);
-        set.add(22);
-        set.add(13);
-        set.add(3);
-        set.add(567);
-        set.add(199);
-        set.add(67);
-        set.add(290);
-        set.add(90);
-        set.add(34);
-        set.add(62);
-        set.add(45);
-        set.add(6);
-        set.add(5);
-        set.add(89);
-        set.add(57);
-        set.add(32);
+        set.summa(23);
+        set.summa(234);
+        set.summa(232);
+        set.summa(21);
+        set.summa(22);
+        set.summa(13);
+        set.summa(3);
+        set.summa(567);
+        set.summa(199);
+        set.summa(67);
+        set.summa(290);
+        set.summa(90);
+        set.summa(34);
+        set.summa(62);
+        set.summa(45);
+        set.summa(6);
+        set.summa(5);
+        set.summa(89);
+        set.summa(57);
+        set.summa(32);
         return set;
     }
 
