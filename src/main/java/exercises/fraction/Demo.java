@@ -2,7 +2,20 @@ package exercises.fraction;
 
 public class Demo {
     public static void main(String[] args) {
-//        try {
+        Rational number1 = new Rational();
+        number1.setNominator(2);
+        number1.setDenominator(5);
+
+        Rational number2 = new Rational(1,5);
+
+
+        System.out.println(number1.add(number2).add(number1));
+
+
+
+
+
+        /*try {
         int n1 = (int) (Math.random() * (11 + 10) - 10);
         int d1 = (int) (Math.random() * (11 + 10) - 10);
         int n2 = (int) (Math.random() * (11 + 10) - 10);
@@ -18,11 +31,11 @@ public class Demo {
 
 
         Rational temp = new Rational(f1);
-        temp.summa(f2);
-        System.out.println(/*f1Str + " + " + f2Str + " = " + */temp.toString());
+        temp.add(f2);
+        System.out.println(*//*f1Str + " + " + f2Str + " = " + *//*temp.toString());
         temp.setValue(f1);
 
-/*
+*//*
         temp.substract(f2);
         System.out.println(f1Str + " - " + f2Str + " = " + temp.toString());
         temp.setValue(f1);
@@ -34,6 +47,7 @@ public class Demo {
         temp.divide(f2);
         System.out.println(f1Str + " / " + f2Str + " = " + temp.toString());
         temp.setValue(f1);
-*/
+*//*
+    }*/
     }
 }

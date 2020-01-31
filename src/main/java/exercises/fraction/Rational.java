@@ -1,80 +1,61 @@
 package exercises.fraction;
 
 public class Rational {
-    private int n; // параметр числителя
-    private int d; // параметр знаменателя
+    private int nominator; // параметр числителя
+    private int denominator; // параметр знаменателя
 
-    /*public Rational(int n) {
-        setValue(n);
+    /*public Rational(int nominator) {
+        setValue(nominator);
     }*/
 
-    public Rational(int n, int d) {
-        setValue(n, d);
+    public Rational() {
     }
 
-    public Rational(Rational f) {
-        setValue(f);
+    public Rational(int nominator, int denominator) {
+        if (denominator == 0) {
+            throw new IllegalArgumentException("Denominator must not be NULL");
+        }
+        this.nominator = nominator;
+        this.denominator = denominator;
     }
 
-    /*public int getNumerator() { // получить значение числителя
-        return n;
+    public int getNominator() {
+        return nominator;
     }
 
-    public int getDenominator() { // получить значение знаменателя
-        return d;
+    public void setNominator(int nominator) {
+        this.nominator = nominator;
     }
 
-    public void setNumerator(int n) { // задать значение с различными параметрами числителя
-        setValue(n, this.d);
+    public int getDenominator() {
+        return denominator;
     }
 
-    public void setDenominator(int d) { // задать значение с различными параметрами знаменателя
-        setValue(this.n, d);
-    }*/
-
-   /* public void setValue(int n) { //Assigns a new fraction from an integer number. Задать значение с различными параметрами целым числом
-        this.n = n;
-        this.d = 1;
-    }*/
-
-    public void setValue(int n, int d) { // Assigns a new value to the fraction. Задать значение с различными параметрами числителя и знаменателя
-        this.n = n;
-        this.d = d;
+    public void setDenominator(int denominator) {
+        this.denominator = denominator;
     }
 
-    public void setValue(Rational f) { // задать значение с различными параметрами другой дроби
-        this.n = f.n;
-        this.d = f.d;
+    public Rational add(Rational rational) {
+        Rational result = new Rational();
+        result.setNominator(this.nominator * rational.getDenominator() + this.denominator * rational.getNominator());
+        result.setDenominator(this.denominator * rational.getDenominator());
+        return result;
     }
 
-    public void summa(int n, int d) {
-        this.n = this.n * d + n * this.d;
-        this.d *= d;
+    @Override
+    public String toString() {
+       /* if(nominator==denominator){
+            return String.valueOf(nominator);
+        }*/
+        return nominator / gcd(nominator,denominator) + "/" + denominator/gcd(nominator,denominator);
     }
 
-    public void substract(int n, int d) {
-        summa(n * -1, d);
+    private int gcd(int n1, int n2) {
+        if (n2 == 0) {
+            return n1;
+        } else {
+            return gcd(n2, n1 % n2);
+        }
     }
 
-    public void multiply(int n, int d) {
-        this.n *= n;
-        this.d *= d;
-    }
-
-    private void divide(int n, int d) {
-        this.n *= d;
-        this.d *= n;
-    }
-
-   /* public void summa(int n) { // Adds an integer number to the fraction // для одного числа
-        summa(n, 1);
-    }*/
-
-    public void summa(Rational f) { // Adds another fraction to the fraction
-        summa(f.n, f.d);
-    }
-
-    public void divide(Rational f){
-        divide(f.n, f.d);
-    }
 }
