@@ -2,9 +2,9 @@ package exercises.fraction;
 
 public class Demo {
     public static void main(String[] args) {
-        Rational number1 = new Rational();
-        number1.setNominator(2);
-        number1.setDenominator(5);
+        Rational number1 = new Rational(2,0);
+       /* number1.setNominator(2);
+        number1.setDenominator(5);*/
 
         Rational number2 = new Rational(1,5);
 
