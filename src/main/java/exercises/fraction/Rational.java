@@ -4,10 +4,6 @@ public class Rational {
     private int nominator; // параметр числителя
     private int denominator; // параметр знаменателя
 
-    /*public Rational(int nominator) {
-        setValue(nominator);
-    }*/
-
     public Rational() {
     }
 
@@ -42,12 +38,38 @@ public class Rational {
         return result;
     }
 
+    public Rational subtraction(Rational rational) {
+        Rational result = new Rational();
+        result.setNominator(this.nominator * rational.getDenominator() - this.denominator * rational.getNominator());
+        result.setDenominator(this.denominator * rational.getDenominator());
+        return result;
+    }
+
+    public Rational multiplication(Rational rational) {
+        Rational result = new Rational();
+        result.setNominator(this.nominator * rational.getNominator());
+        result.setDenominator(this.nominator * rational.getDenominator());
+        return result;
+    }
+
+    public Rational division(Rational rational) {
+        Rational result = new Rational();
+        result.setNominator(this.nominator * rational.getDenominator());
+        result.setDenominator(this.denominator * rational.getDenominator());
+        return result;
+    }
+
     @Override
     public String toString() {
-       /* if(nominator==denominator){
+        return nominator + "/" + denominator;
+    }
+
+    /*@Override
+    public String toString() {
+       *//* if(nominator==denominator){
             return String.valueOf(nominator);
-        }*/
-        return nominator / gcd(nominator,denominator) + "/" + denominator/gcd(nominator,denominator);
+        }*//*
+        return nominator / gcd(nominator, denominator) + "/" + denominator / gcd(nominator, denominator);
     }
 
     private int gcd(int n1, int n2) {
@@ -56,6 +78,5 @@ public class Rational {
         } else {
             return gcd(n2, n1 % n2);
         }
-    }
-
+    }*/
 }
