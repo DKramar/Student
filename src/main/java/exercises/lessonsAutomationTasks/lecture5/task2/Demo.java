@@ -20,13 +20,13 @@ public class Demo {
 
     public static void main(String[] args) {
         Package basicPackage = new Package("Ivan", "address", "address", 200);
-        System.out.println(basicPackage.toString() + " DELIVERY WILL COST: " + basicPackage.basicPackageCost() + "$");
+        //System.out.println(basicPackage.toString() + " DELIVERY WILL COST: " + basicPackage.basicPackageCost() + "$");
 
         TwoDayPackage twoDayPackage = new TwoDayPackage("Helen", "address", "address", 300, 20);
-        System.out.println(twoDayPackage.toString() + " DELIVERY WILL COST: " + twoDayPackage.twoDayPackageCost() + "$");
+        //System.out.println(twoDayPackage.toString() + " DELIVERY WILL COST: " + twoDayPackage.twoDayPackageCost() + "$");
 
         OverNightPackage overNightPackage = new OverNightPackage("Vasia", "address", "address", 400, 2);
-        System.out.println(overNightPackage.toString() + " DELIVERY WILL COST: " + overNightPackage.overNightPackageCost() + "$");
+        //System.out.println(overNightPackage.toString() + " DELIVERY WILL COST: " + overNightPackage.overNightPackageCost() + "$");
 
         double[] Package = new double[]{basicPackage.basicPackageCost(), twoDayPackage.twoDayPackageCost(), overNightPackage.overNightPackageCost()};
         String[] toString = new String[]{basicPackage.toString(), twoDayPackage.toString(), overNightPackage.toString()};

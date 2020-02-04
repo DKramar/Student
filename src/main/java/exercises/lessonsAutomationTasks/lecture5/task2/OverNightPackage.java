@@ -10,6 +10,6 @@ public class OverNightPackage extends Package {
     }
 
     public double overNightPackageCost() {
-        return super.basicPackageCost() + markupPerGram;
+        return this.getWeight() * (Package.gramCost + markupPerGram);
     }
 }
