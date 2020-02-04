@@ -1,167 +1,82 @@
 package exercises.lessonsAutomationTasks.lecture5.task1;
 
 public class Rational {
+    private int nominator; // параметр числителя
+    private int denominator; // параметр знаменателя
 
-    private static int a;
-    private static int b;
-    private static int c;
-    private static int d;
-
-    public static void setA(int a) {
-        Rational.a = a;
+    public Rational() {
     }
 
-    public static void setB(int b) {
-        Rational.b = b;
-    }
-
-    public static void setC(int c) {
-        Rational.c = c;
-    }
-
-    public static void setD(int d) {
-        Rational.d = d;
-    }
-
-    public static int getA() {
-        return a;
-    }
-
-    public static int getB() {
-        return b;
-    }
-
-    public static int getC() {
-        return c;
-    }
-
-    public static int getD() {
-        return d;
-    }
-
-    public static int summaNumerator() {
-        /*int result;
-        if (b == 0 || d == 0) {
-
-        } else {
-            result = a * d + b * c;
+    public Rational(int nominator, int denominator) {
+        if (denominator == 0) {
+            throw new IllegalArgumentException("DENOMINATOR MUSTN'T BE NULL");
         }
-        return result;*/
-        return a * d + b * c;
+        this.nominator = nominator;
+        this.denominator = denominator;
     }
 
-    public static int summaDenominator() {
-        /*int result;
-        if (b == 0 || d == 0) {
-            result = 0;
-        } else {
-            result = b * d;
-        }
-        return result;*/
-        return b * d;
+    public int getNominator() {
+        return nominator;
     }
 
-    private static int subtractionNumerator(int a, int b, int c, int d) {
-        int result;
-        if (b == 0 || d == 0) {
-            result = 0;
-        } else {
-            result = a * d - b * c;
-        }
+    public void setNominator(int nominator) {
+        this.nominator = nominator;
+    }
+
+    public int getDenominator() {
+        return denominator;
+    }
+
+    public void setDenominator(int denominator) {
+        this.denominator = denominator;
+    }
+
+    public Rational add(Rational rational) {
+        Rational result = new Rational();
+        result.setNominator(this.nominator * rational.getDenominator() + this.denominator * rational.getNominator());
+        result.setDenominator(this.denominator * rational.getDenominator());
         return result;
     }
 
-    private static int subtractionDenominator(int b, int d) {
-        int result;
-        if (b == 0 || d == 0) {
-            result = 0;
-        } else {
-            result = b * d;
-        }
+    public Rational subtraction(Rational rational) {
+        Rational result = new Rational();
+        result.setNominator(this.nominator * rational.getDenominator() - this.denominator * rational.getNominator());
+        result.setDenominator(this.denominator * rational.getDenominator());
         return result;
     }
 
-    private static int multiplicationNumerator(int a, int b, int c, int d) {
-        int result;
-        if (b == 0 || d == 0 || a == 0 || c == 0) {
-            result = 0;
-        } else {
-            result = a * c;
-        }
+    public Rational multiplication(Rational rational) {
+        Rational result = new Rational();
+        result.setNominator(this.nominator * rational.getNominator());
+        result.setDenominator(this.denominator * rational.getDenominator());
         return result;
     }
 
-    private static int multiplicationDenominator(int b, int d) {
-        int result;
-        if (b == 0 || d == 0) {
-            result = 0;
-        } else {
-            result = b * d;
-        }
+    public Rational division(Rational rational) {
+        Rational result = new Rational();
+        result.setNominator(this.nominator * rational.getDenominator());
+        result.setDenominator(this.denominator * rational.getNominator());
         return result;
     }
 
-    private static int divisionNumerator(int a, int b, int d) {
-        int result;
-        if (b == 0 || d == 0) {
-            result = 0;
-        } else {
-            result = a * d;
+    /*@Override
+    public String toString() {
+        return nominator + "/" + denominator;
+    }*/
+
+    @Override
+    public String toString() {
+        if (nominator == denominator) {
+            return String.valueOf(nominator);
         }
-        return result;
+        return nominator / gcd(nominator, denominator) + "/" + denominator / gcd(nominator, denominator);
     }
 
-    private static int divisionDenominator(int b, int d, int c) {
-        int result;
-        if (b == 0 || d == 0) {
-            result = 0;
+    private int gcd(int n1, int n2) {
+        if (n2 == 0) {
+            return n1;
         } else {
-            result = b * c;
+            return gcd(n2, n1 % n2);
         }
-        return result;
-    }
-
-    public static String summaResult() {
-        String r;
-        if (b == 0 || d == 0) {
-            r = a + "/" + b + " + " + c + "/" + d + " = " + "Division by zero";
-        } else {
-            r = a + "/" + b + " + " + c + "/" + d + " = " + summaNumerator() + "/" + summaDenominator();
-        }
-        return r;
-    }
-
-    public static String substractionResult(int a, int b, int c, int d) {
-        String r;
-        if (b == 0 || d == 0) {
-            r = a + "/" + b + " - " + c + "/" + d + " = " + "Division by zero";
-        } else {
-            r = a + "/" + b + " - " + c + "/" + d + " = " + subtractionNumerator(a, b, c, d) + "/" + subtractionDenominator(b, d);
-        }
-        return r;
-    }
-
-    public static String multiplicationResult(int a, int b, int c, int d) {
-        String r;
-        if (b == 0 || d == 0) {
-            r = a + "/" + b + " * " + c + "/" + d + " = " + "Division by zero";
-        } else if (a == 0 || c == 0) {
-            r = a + "/" + b + " * " + c + "/" + d + " = " + "0";
-        } else {
-            r = a + "/" + b + " * " + c + "/" + d + " = " + multiplicationNumerator(a, b, c, d) + "/" + multiplicationDenominator(b, d);
-        }
-        return r;
-    }
-
-    public static String divisionResult(int a, int b, int c, int d) {
-        String r;
-        if (b == 0 || d == 0) {
-            r = a + "/" + b + " / " + c + "/" + d + " = " + "Division by zero";
-        } else if (a == 0 || c == 0) {
-            r = a + "/" + b + " / " + c + "/" + d + " = " + "0";
-        } else {
-            r = a + "/" + b + " / " + c + "/" + d + " = " + divisionNumerator(a, b, d) + "/" + divisionDenominator(b, d, c);
-        }
-        return r;
     }
 }
