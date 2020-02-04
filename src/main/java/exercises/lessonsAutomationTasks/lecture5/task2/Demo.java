@@ -25,7 +25,7 @@ public class Demo {
         TwoDayPackage twoDayPackage = new TwoDayPackage("Helen", "address", "address", 300, 20);
         System.out.println(twoDayPackage.toString() + " DELIVERY WILL COST: " + twoDayPackage.twoDayPackageCost() + "$");
 
-        OverNightPackage overNightPackage = new OverNightPackage("Vasia", "adress", "adress", 400, 2);
+        OverNightPackage overNightPackage = new OverNightPackage("Vasia", "address", "address", 400, 2);
         System.out.println(overNightPackage.toString() + " DELIVERY WILL COST: " + overNightPackage.overNightPackageCost() + "$");
 
         double[] Package = new double[]{basicPackage.basicPackageCost(), twoDayPackage.twoDayPackageCost(), overNightPackage.overNightPackageCost()};
