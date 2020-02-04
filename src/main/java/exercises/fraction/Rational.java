@@ -9,7 +9,7 @@ public class Rational {
 
     public Rational(int nominator, int denominator) {
         if (denominator == 0) {
-            throw new IllegalArgumentException("Denominator must not be NULL");
+            throw new IllegalArgumentException("DENOMINATOR MUSTN'T BE NULL");
         }
         this.nominator = nominator;
         this.denominator = denominator;
@@ -48,27 +48,27 @@ public class Rational {
     public Rational multiplication(Rational rational) {
         Rational result = new Rational();
         result.setNominator(this.nominator * rational.getNominator());
-        result.setDenominator(this.nominator * rational.getDenominator());
+        result.setDenominator(this.denominator * rational.getDenominator());
         return result;
     }
 
     public Rational division(Rational rational) {
         Rational result = new Rational();
         result.setNominator(this.nominator * rational.getDenominator());
-        result.setDenominator(this.denominator * rational.getDenominator());
+        result.setDenominator(this.denominator * rational.getNominator());
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return nominator + "/" + denominator;
     }
 
     /*@Override
     public String toString() {
-       *//* if(nominator==denominator){
+        return nominator + "/" + denominator;
+    }*/
+
+    @Override
+    public String toString() {
+        if (nominator == denominator) {
             return String.valueOf(nominator);
-        }*//*
+        }
         return nominator / gcd(nominator, denominator) + "/" + denominator / gcd(nominator, denominator);
     }
 
@@ -78,5 +78,5 @@ public class Rational {
         } else {
             return gcd(n2, n1 % n2);
         }
-    }*/
+    }
 }
