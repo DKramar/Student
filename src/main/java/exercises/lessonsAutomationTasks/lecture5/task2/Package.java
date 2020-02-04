@@ -2,7 +2,7 @@ package exercises.lessonsAutomationTasks.lecture5.task2;
 /*
 Создайте иерархию наследования посылок.
 - Базовый класс - Package со следующими элементами: имя, адрес отправителя и получателя, вес (положительное число), цена доставки за грамм (константа double gramCost = 0.1).
-Должен присутствовать метод вычисления стоимости доставки (calculateCost) как произведение веса на цену за грамм.
+Должен присутствовать метод вычисления стоимости доставки (basicPackageCost) как произведение веса на цену за грамм.
 - Первый наследник - TwoDayPackage должен иметь функционал базового класса, включая дополнительный параметр постоянной наценки,
 которая должна прибавляться к полученной цене за вес при вычислении стоимости доставки.
 - Второй наследник - OverNightPackage должен иметь функционал базового класса, включая дополнительный параметр наценки за грамм,
@@ -38,7 +38,7 @@ public class Package {
         this.name = name;
     }
 
-    public String getSenderAddress() {
+   /* public String getSenderAddress() {
         return senderAddress;
     }
 
@@ -52,7 +52,7 @@ public class Package {
 
     public void setRecipientAddress(String recipientAddress) {
         this.recipientAddress = recipientAddress;
-    }
+    }*/
 
     public double getWeight() {
         return weight;
@@ -62,7 +62,7 @@ public class Package {
         this.weight = weight;
     }
 
-    public double calculateCost() {
+    public double basicPackageCost() {
         return this.getWeight() * /*(int)*/Package.gramCost;
     }
 
