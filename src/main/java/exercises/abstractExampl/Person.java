@@ -1,7 +1,7 @@
 package exercises.abstractExampl;
 
 public abstract class Person {
-    private String name; // Обявил параметр класса
+    private String name; // Обявил поле класса
 
     public Person(String name) {
         this.name = name; // создал конструктор для имени
