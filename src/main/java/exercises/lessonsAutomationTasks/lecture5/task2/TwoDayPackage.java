@@ -9,7 +9,9 @@ public class TwoDayPackage extends Package {
         this.permanentMargin = permanentMargin;
     }
 
-    public double twoDayPackageCost() {
+    @Override
+    public double basicPackageCost() {
         return super.basicPackageCost() + permanentMargin;
     }
+
 }

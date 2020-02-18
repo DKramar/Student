@@ -9,7 +9,8 @@ public class OverNightPackage extends Package {
         this.markupPerGram = markupPerGram;
     }
 
-    public double overNightPackageCost() {
+    @Override
+    public double basicPackageCost() {
         return this.getWeight() * (Package.gramCost + markupPerGram);
     }
 }
