@@ -1,4 +1,4 @@
-package exercises.lessonsAutomationTasks.oopTasks;
+package exercises.oopTasks;
 
 public class Rectangle {
     public Point topLeft = new Point();

@@ -1,4 +1,4 @@
-package exercises.lessonsAutomationTasks.oopTasks;
+package exercises.oopTasks;
 
 public class Point {
     public int x; // обьявил ПОЛЕ x

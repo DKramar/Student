@@ -1,4 +1,4 @@
-package exercises.lessonsAutomationTasks.oopTasks;
+package exercises.oopTasks;
 
 public class MyClass {
     public static void main(String[] args) {
