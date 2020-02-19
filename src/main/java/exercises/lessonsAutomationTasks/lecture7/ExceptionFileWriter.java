@@ -23,14 +23,13 @@ import java.io.IOException;
 public class ExceptionFileWriter {
     public static void main(String[] args) {
         String address = "D://GD//Student//src//main//java//exercises//lessonsAutomationTasks//lecture7//notes.txt";
-        //String text = "Hello World!";
+        String text = "Hello World!";
 
         File myFile = new File(address);
         if (myFile.exists()) {
             System.out.println("File already exists");
         } else {
             try (FileWriter writer = new FileWriter(address, false)) {
-                String text = "Hello World!";
                 writer.write(text); // запись всей строки
 
             } catch (IOException ex) {
