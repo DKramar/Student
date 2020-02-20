@@ -1,26 +1,28 @@
 package exercises.lessonsAutomationTasks.lecture5.task1;
 
 public class Rational {
-    private int nominator; // параметр числителя
+    private int numerator; // параметр числителя
     private int denominator; // параметр знаменателя
 
     public Rational() {
+        numerator = 0;
+        denominator = 1;
     }
 
     public Rational(int nominator, int denominator) {
         if (denominator == 0) {
             throw new IllegalArgumentException("DENOMINATOR MUSTN'T BE NULL");
         }
-        this.nominator = nominator;
+        this.numerator = nominator;
         this.denominator = denominator;
     }
 
-    public int getNominator() {
-        return nominator;
+    public int getNumerator() {
+        return numerator;
     }
 
-    public void setNominator(int nominator) {
-        this.nominator = nominator;
+    public void setNumerator(int numerator) {
+        this.numerator = numerator;
     }
 
     public int getDenominator() {
@@ -33,43 +35,43 @@ public class Rational {
 
     public Rational add(Rational rational) {
         Rational result = new Rational();
-        result.setNominator(this.nominator * rational.getDenominator() + this.denominator * rational.getNominator());
+        result.setNumerator(this.numerator * rational.getDenominator() + this.denominator * rational.getNumerator());
         result.setDenominator(this.denominator * rational.getDenominator());
         return result;
     }
 
     public Rational subtraction(Rational rational) {
         Rational result = new Rational();
-        result.setNominator(this.nominator * rational.getDenominator() - this.denominator * rational.getNominator());
+        result.setNumerator(this.numerator * rational.getDenominator() - this.denominator * rational.getNumerator());
         result.setDenominator(this.denominator * rational.getDenominator());
         return result;
     }
 
     public Rational multiplication(Rational rational) {
         Rational result = new Rational();
-        result.setNominator(this.nominator * rational.getNominator());
+        result.setNumerator(this.numerator * rational.getNumerator());
         result.setDenominator(this.denominator * rational.getDenominator());
         return result;
     }
 
     public Rational division(Rational rational) {
         Rational result = new Rational();
-        result.setNominator(this.nominator * rational.getDenominator());
-        result.setDenominator(this.denominator * rational.getNominator());
+        result.setNumerator(this.numerator * rational.getDenominator());
+        result.setDenominator(this.denominator * rational.getNumerator());
         return result;
     }
 
     /*@Override
     public String toString() {
-        return nominator + "/" + denominator;
+        return numerator + "/" + denominator;
     }*/
 
     @Override
     public String toString() {
-        if (nominator == denominator) {
-            return String.valueOf(nominator);
+        if (numerator == denominator) {
+            return String.valueOf(numerator);
         }
-        return nominator / gcd(nominator, denominator) + "/" + denominator / gcd(nominator, denominator);
+        return numerator / gcd(numerator, denominator) + "/" + denominator / gcd(numerator, denominator);
     }
 
     private int gcd(int n1, int n2) {
