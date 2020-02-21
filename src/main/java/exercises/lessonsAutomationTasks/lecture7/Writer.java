@@ -13,10 +13,10 @@ public class Writer {
         this.text = text;
     }
 
-    public File save() throws FileWriterException{
+    public File save() throws FileWriterException {
         File result = new File(this.address);
         if (result.exists()) {
-                throw new FileWriterException("File already exists");
+            throw new FileWriterException("File already exists");
         } else {
             try (java.io.FileWriter writer = new java.io.FileWriter(this.address, false)) {
                 writer.write(this.text); // запись всей строки
