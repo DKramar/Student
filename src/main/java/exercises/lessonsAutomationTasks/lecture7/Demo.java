@@ -10,16 +10,16 @@ package exercises.lessonsAutomationTasks.lecture7;
 
 Для реализации метода нужно воспользоваться классом java.io.File (https://docs.oracle.com/javase/7/docs/api/java/io/File.html)
 Для проверки существует файл или нет использовать метод exists (https://docs.oracle.com/javase/7/docs/api/java/io/File.html#exists())
-Для записи в файл использовать класс java.io.FileWriter (https://docs.oracle.com/javase/7/docs/api/java/io/FileWriter.html)
+Для записи в файл использовать класс java.io.Writer (https://docs.oracle.com/javase/7/docs/api/java/io/FileWriter.html)
 и его методом write (https://docs.oracle.com/javase/7/docs/api/java/io/Writer.html#write(java.lang.String))
 
-Напомню, что FileWriter является ресурсом который нужно закрывать после использования. Рекомендую использовать конструкцию try with resources.
+Напомню, что Writer является ресурсом который нужно закрывать после использования. Рекомендую использовать конструкцию try with resources.
  */
 
 public class Demo {
     public static void main(String[] args) {
 
-        ExceptionFileWriter myFile = new ExceptionFileWriter("D://GD//Student//src//main//java//exercises//lessonsAutomationTasks//lecture7//notes.txt", "Hello World!");
+        Writer myFile = new Writer("D://GD//Student//src//main//java//exercises//lessonsAutomationTasks//lecture7//notes.txt", "Hello World!");
         myFile.save();
     }
 }
