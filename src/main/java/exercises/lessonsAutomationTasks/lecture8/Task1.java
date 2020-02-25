@@ -12,12 +12,14 @@ package exercises.lessonsAutomationTasks.lecture8;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Formatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Task1 {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
         System.out.println("ВВЕДИТЕ ИСХОДНУЮ СТРОКУ:");
         String sourceString = reader.readLine();
         String sourceStringLowerCase = sourceString.toLowerCase();
@@ -26,12 +28,17 @@ public class Task1 {
         String substring = reader.readLine();
         String substringLowerCase = substring.toLowerCase();
 
+
         Pattern pattern = Pattern.compile(substringLowerCase);
         Matcher matcher = pattern.matcher(sourceStringLowerCase);
         int count = 0;
         while (matcher.find()) {
             count++;
         }
-        System.out.printf("%s%n", "Строка", substring, "встречается в строке", sourceString, count,"раз" );
+
+        Formatter f = new Formatter();
+        f.format("%s%c%s%c%s%c%s%c%s%d%s%n", "Строка ", '"', substring, '"', " встречается в строке ", '"', sourceString, '"', " ", count, " раз/а");
+        System.out.print(f);
+
     }
 }
