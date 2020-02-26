@@ -1,4 +1,4 @@
-package exercises.lessonsAutomationTasks.lecture8;
+package exercises.lessonsAutomationTasks.lecture8.task1;
 /*
 Написать программу для подсчета количества вхождений подстроки в строку, поиск подстроки производить без учета регистра.
 Исходную строку и подстроку для поиска считывать из консоли.
@@ -16,29 +16,37 @@ import java.util.Formatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Task1 {
-    public static void main(String[] args) throws Exception {
+public class SubstringDefinitionTask {
+
+    private String sourceString; // исходная строка
+    private String substring; // подстрока
+
+    public void readStringFromConsole() throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("ВВЕДИТЕ ИСХОДНУЮ СТРОКУ:");
-        String sourceString = reader.readLine();
-        String sourceStringLowerCase = sourceString.toLowerCase();
+        this.sourceString = reader.readLine();
+        sourceString = sourceString.toLowerCase();
 
         System.out.println("ВВЕДИТЕ ПОДСТРОКУ:");
-        String substring = reader.readLine();
-        String substringLowerCase = substring.toLowerCase();
+        this.substring = reader.readLine();
+        substring = substring.toLowerCase();
+    }
 
-
-        Pattern pattern = Pattern.compile(substringLowerCase);
-        Matcher matcher = pattern.matcher(sourceStringLowerCase);
+    public int entranceString() {
+        Pattern pattern = Pattern.compile(this.substring);
+        Matcher matcher = pattern.matcher(this.sourceString);
         int count = 0;
         while (matcher.find()) {
             count++;
         }
+        return count;
+    }
 
-        Formatter f = new Formatter();
-        f.format("%s%c%s%c%s%c%s%c%s%d%s%n", "Строка ", '"', substring, '"', " встречается в строке ", '"', sourceString, '"', " ", count, " раз/а");
-        System.out.print(f);
-
+    public String printResult() {
+        Formatter print = new Formatter();
+        print.format("Строка \"%s\" встречается в строке \"%s\" %d раз(а)%n", substring, sourceString, entranceString());
+        return print.toString();
     }
 }
+
