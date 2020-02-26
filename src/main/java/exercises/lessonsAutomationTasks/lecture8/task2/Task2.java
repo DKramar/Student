@@ -1,4 +1,4 @@
-package exercises.lessonsAutomationTasks.lecture8;
+package exercises.lessonsAutomationTasks.lecture8.task2;
 /*
 Написать программу “реверса” строки 5-ю разными способами.
 Исходную строку считать с консоли.
