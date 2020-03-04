@@ -49,12 +49,25 @@ public class ReverseMethods {
         return endTime - startTime;
     }
 
-    /*// 3-й метод toCharArray (вывод с конца строки)
-    public long toCharArrayReverse() {
-        char[] reverseArray = stringRevers.toCharArray();
-        for (int i = reverseArray.length - 1; i >= 0; i--) ;
-        return endTime - startTime;
-    }*/
+    // 3-й метод toCharArray (вывод с конца строки)
+    public String reverseStringWithRecursion() {
+        String rightPart;
+        String leftPart;
+
+        int length = stringRevers.length();
+
+        // заканчиваем рекурсивный обход
+        if (length <= 1) {
+            return stringRevers;
+        }
+
+        leftPart = stringRevers.substring(0, length / 2);
+
+        rightPart = stringRevers.substring(length / 2, length);
+
+        // рекурсивно переворачиваем левую и правую часть входной строки
+        return reverseStringWithRecursion(rightPart) + reverseStringWithRecursion(leftPart);
+    }
 
     // 4 toCharArray (перестановка в цикле)
     public Object toCharArrayReverse() {

@@ -11,7 +11,7 @@ public class ReverseDemo {
 
         System.out.printf("String Buffer method reverse operation from \"%s\" to \"%s\" took: %d nano seconds %n", revers.toString(), revers.StringBufferReverse(), revers.StringBufferTime());
         System.out.printf("String Builder method reverse operation from \"%s\" to \"%s\" took: %d nano seconds %n", revers.toString(), revers.StringBuilderReverse(), revers.StringBuilderTime());
-        System.out.printf("??? reverse method operation from \"%s\" to \"%s\" took: %d nano seconds %n", revers.toString(), revers.StringBufferReverse(), revers.StringBufferTime());
+        System.out.printf("ReverseStringWithRecursion reverse method operation from \"%s\" to \"%s\" took: %d nano seconds %n", revers.toString(), revers.reverseStringWithRecursion(), revers.StringBufferTime());
         System.out.printf("ToCharArray method reverse operation from \"%s\" to \"%s\" took: %d nano seconds %n", revers.toString(), revers.toCharArrayReverse(), revers.toCharArrayTime());
         System.out.printf("CharAt method reverse operation from \"%s\" to \"%s\" took: %d nano seconds %n", revers.toString(), revers.charAtReverse(), revers.charAtTime());
     }
