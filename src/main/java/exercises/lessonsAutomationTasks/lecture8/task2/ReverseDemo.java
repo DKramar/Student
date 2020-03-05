@@ -6,13 +6,35 @@ package exercises.lessonsAutomationTasks.lecture8.task2;
  */
 
 public class ReverseDemo {
-    public static void main(String[] args) throws Exception{
-        ReverseMethods revers = new ReverseMethods();
+    public static void main(String[] args) throws Exception {
+        String stringFromUser = ReadFromConsole.readStringFromConsole();
 
-        System.out.printf("String Buffer method reverse operation from \"%s\" to \"%s\" took: %d nano seconds %n", revers.toString(), revers.StringBufferReverse(), revers.StringBufferTime());
-        System.out.printf("String Builder method reverse operation from \"%s\" to \"%s\" took: %d nano seconds %n", revers.toString(), revers.StringBuilderReverse(), revers.StringBuilderTime());
-        System.out.printf("ReverseStringWithRecursion reverse method operation from \"%s\" to \"%s\" took: %d nano seconds %n", revers.toString(), revers.reverseStringWithRecursion(), revers.StringBufferTime());
-        System.out.printf("ToCharArray method reverse operation from \"%s\" to \"%s\" took: %d nano seconds %n", revers.toString(), revers.toCharArrayReverse(), revers.toCharArrayTime());
-        System.out.printf("CharAt method reverse operation from \"%s\" to \"%s\" took: %d nano seconds %n", revers.toString(), revers.charAtReverse(), revers.charAtTime());
+        String[] methodName = new String[]{
+                "String Buffer method reverse",
+                "String Builder method reverse",
+                "CharAt method reverse",
+                "ToCharArray recursive method reverse",
+                "ToCharArray cycle method reverse"
+        };
+
+        String[] reverseResult = new String[]{
+                StringBufferReverseMethod.stringBufferReverse(stringFromUser).toString(),
+                StringBuilderReverseMethod.stringBuilderReverse(stringFromUser).toString(),
+                CharAtMethod.charAtReverse(stringFromUser),
+                ToCharArrayRecursiveMethod.reverseStringWithRecursion(stringFromUser),
+                ToCharArrayСycleMethod.toCharArrayReverse(stringFromUser).toString(),
+        };
+
+        long[] reverseTime = new long[]{
+                StringBufferReverseMethod.stringBufferTime(stringFromUser),
+                StringBuilderReverseMethod.stringBuilderTime(stringFromUser),
+                CharAtMethod.charAtTime(stringFromUser),
+                ToCharArrayRecursiveMethod.charAtTimeRecursive(stringFromUser),
+                ToCharArrayСycleMethod.toCharArrayTime(stringFromUser)
+        };
+
+        for (int i = 0; i < reverseResult.length; i++) {
+            System.out.printf("%s operation from \"%s\" to \"%s\" took: %d nano seconds %n", methodName[i], stringFromUser, reverseResult[i], reverseTime[i]);
+        }
     }
 }
