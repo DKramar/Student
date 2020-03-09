@@ -3,6 +3,8 @@ package exercises.lessonsAutomationTasks.lecture8.task2;
 public class ToCharArrayСycleMethod {
 
     // toCharArray (перестановка в цикле)
+    public static String metodNameToCharArraCycle = "ToCharArray cycle method reverse";
+
     public static Object toCharArrayReverse(String textToReverse) {
         char[] reverseArray = textToReverse.toCharArray();
         String result = "";

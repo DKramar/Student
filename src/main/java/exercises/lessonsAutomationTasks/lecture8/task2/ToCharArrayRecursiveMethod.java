@@ -3,6 +3,8 @@ package exercises.lessonsAutomationTasks.lecture8.task2;
 public class ToCharArrayRecursiveMethod {
 
     // toCharArrayRecursive (вывод с конца строки)
+    public static String metodNameToCharArrayRecursive = "ToCharArray recursive method reverse";
+
     public static String reverseStringWithRecursion(String textToReverse) {
         String rightPart;
         String leftPart;

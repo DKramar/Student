@@ -3,6 +3,8 @@ package exercises.lessonsAutomationTasks.lecture8.task2;
 public class CharAtMethod {
 
     // charAt
+    public static String methodNameCharAt = "CharAt method reverse";
+
     public static String charAtReverse(String textToReverse) {
         int stringLength = textToReverse.length();
         String result = "";

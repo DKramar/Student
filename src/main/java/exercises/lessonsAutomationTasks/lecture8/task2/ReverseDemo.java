@@ -10,11 +10,11 @@ public class ReverseDemo {
         String stringFromUser = ReadFromConsole.readStringFromConsole();
 
         String[] methodName = new String[]{
-                "String Buffer method reverse",
-                "String Builder method reverse",
-                "CharAt method reverse",
-                "ToCharArray recursive method reverse",
-                "ToCharArray cycle method reverse"
+                StringBufferReverseMethod.methodNameStringBuffer,
+                StringBuilderReverseMethod.methodNameStringBuilder,
+                CharAtMethod.methodNameCharAt,
+                ToCharArrayRecursiveMethod.metodNameToCharArrayRecursive,
+                ToCharArrayСycleMethod.metodNameToCharArraCycle
         };
 
         String[] reverseResult = new String[]{
