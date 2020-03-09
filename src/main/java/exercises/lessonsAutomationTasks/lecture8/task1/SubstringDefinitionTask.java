@@ -26,16 +26,14 @@ public class SubstringDefinitionTask {
 
         System.out.println("ВВЕДИТЕ ИСХОДНУЮ СТРОКУ:");
         this.sourceString = reader.readLine();
-        sourceString = sourceString.toLowerCase();
 
         System.out.println("ВВЕДИТЕ ПОДСТРОКУ:");
         this.substring = reader.readLine();
-        substring = substring.toLowerCase();
     }
 
     public int entranceString() {
-        Pattern pattern = Pattern.compile(this.substring);
-        Matcher matcher = pattern.matcher(this.sourceString);
+        Pattern pattern = Pattern.compile(this.substring.toLowerCase());
+        Matcher matcher = pattern.matcher(this.sourceString.toLowerCase());
         int count = 0;
         while (matcher.find()) {
             count++;
@@ -43,7 +41,7 @@ public class SubstringDefinitionTask {
         return count;
     }
 
-    public String printResult() {
+    public String printFormat() {
         Formatter print = new Formatter();
         print.format("Строка \"%s\" встречается в строке \"%s\" %d раз(а)%n", substring, sourceString, entranceString());
         return print.toString();

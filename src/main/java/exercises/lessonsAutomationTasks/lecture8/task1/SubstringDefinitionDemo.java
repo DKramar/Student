@@ -6,6 +6,6 @@ public class SubstringDefinitionDemo {
 
         SubstringDefinitionTask substringDefinition = new SubstringDefinitionTask();
         substringDefinition.readStringFromConsole();
-        System.out.println(substringDefinition.printResult());
+        System.out.println(substringDefinition.printFormat());
     }
 }
