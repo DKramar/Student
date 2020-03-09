@@ -1,4 +1,4 @@
-package exercises.abstractExampl;
+package exercises.abstractExampl.example1;
 
 public class Employee extends Person {
 
@@ -17,7 +17,9 @@ public class Employee extends Person {
 
     public static void main(String[] args){
         //Person person = new Person("Ivan"); // Ошибка компиляции. Нельзя создавать экземпляры абстракного класса
-        Employee employee /*Обьявил переменную employee имеющую тип Employee (класс)*/ = new Employee /*создал экземпляр класса Employee и сохранил ссылку на него в переменной employee*/("Artem", "Nix");
+        Employee employee /*Обьявил переменную employee имеющую тип Employee (класс)*/
+                = new Employee /*создал экземпляр класса Employee и сохранил ссылку на него в переменной employee*/
+                ("Artem", "Nix");
         Person somePerson = new Employee("Igor", "Nix");
 
         employee.display();
