@@ -1,9 +1,8 @@
 package exercises.lessonsAutomationTasks.lecture6.task1.rationalMethodOverrides;
-/*
-Во всех классах задания lecture5 переопределить методы equals(), clone(), toString() и продемонстрировать их использование.
- */
 
-public class Rational {
+import java.util.Objects;
+
+public class Rational implements Cloneable{
     private int numerator; // параметр числителя
     private int denominator; // параметр знаменателя
 
@@ -64,11 +63,6 @@ public class Rational {
         return result;
     }
 
-    /*@Override
-    public String toString() {
-        return numerator + "/" + denominator;
-    }*/
-
     @Override
     public String toString() {
         if (numerator == denominator) {
@@ -83,5 +77,24 @@ public class Rational {
         } else {
             return gcd(n2, n1 % n2);
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rational rational = (Rational) o;
+        return numerator == rational.numerator &&
+                denominator == rational.denominator;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numerator, denominator);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
