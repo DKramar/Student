@@ -1,6 +1,8 @@
 package exercises.lessonsAutomationTasks.lecture6.task1.packageMethodOverrides;
 
-public class Package {
+import java.util.Objects;
+
+public class Package implements Cloneable {
     private String name;
     private String senderAddress;
     private String recipientAddress;
@@ -37,5 +39,26 @@ public class Package {
     @Override
     public String toString() {
         return "Name: " + name + ". " + "Sender address: " + senderAddress + ". " + "Recipient address: " + recipientAddress + ". " + "Weight: " + weight + " grams. " + "Gram cost: " + gramCost + "$";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Package aPackage = (Package) o;
+        return Double.compare(aPackage.weight, weight) == 0 &&
+                name.equals(aPackage.name) &&
+                senderAddress.equals(aPackage.senderAddress) &&
+                recipientAddress.equals(aPackage.recipientAddress);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, senderAddress, recipientAddress, weight);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

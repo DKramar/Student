@@ -64,7 +64,7 @@ public class Rational implements Cloneable{
     }
 
     @Override
-    public String toString() {
+    public String toString() { //переопределить метод equals()
         if (numerator == denominator) {
             return String.valueOf(numerator);
         }
@@ -79,7 +79,7 @@ public class Rational implements Cloneable{
         }
     }
 
-    @Override
+    @Override //переопределить метод equals()
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -93,7 +93,7 @@ public class Rational implements Cloneable{
         return Objects.hash(numerator, denominator);
     }
 
-    @Override
+    @Override //переопределить метод clone()
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
