@@ -1,7 +1,6 @@
 package exercises.lessonsAutomationTasks.lecture7;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 
 public class Writer {
@@ -13,21 +12,14 @@ public class Writer {
         this.text = text;
     }
 
-    public File save() throws FileWriterException {
+    public File save() throws IOException {
         File result = new File(this.address);
         if (result.exists()) {
             throw new FileWriterException("File already exists");
-        } else {
-            try (java.io.FileWriter writer = new java.io.FileWriter(this.address, false)) {
-                writer.write(this.text); // запись всей строки
-
-            } catch (IOException ex) {
-
-                System.out.println(ex.getMessage());
-            }
-            System.out.println("The file has been written");
+        }
+        try (java.io.FileWriter writer = new java.io.FileWriter(this.address, false)) { // try-with-resources.
+            writer.write(this.text); // запись всей строки
         }
         return result;
     }
 }
-
