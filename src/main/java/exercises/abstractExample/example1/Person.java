@@ -1,4 +1,4 @@
-package exercises.abstractExampl.example1;
+package exercises.abstractExample.example1;
 
 public abstract class Person {
     private String name; // Обявил поле класса

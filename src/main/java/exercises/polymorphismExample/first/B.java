@@ -1,4 +1,4 @@
-package exercises.polymorphismExample;
+package exercises.polymorphismExample.first;
 
 public class B extends A {
     @Override

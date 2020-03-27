@@ -1,4 +1,4 @@
-package exercises.abstractExampl.example1;
+package exercises.abstractExample.example1;
 
 public class Employee extends Person {
 
