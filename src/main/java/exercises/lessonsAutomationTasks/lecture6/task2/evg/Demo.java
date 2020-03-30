@@ -10,9 +10,9 @@ public class Demo {
     Shape circleTwo = new Circle(7.47);
 
     System.out.println(square);
-    System.out.println("The area of the square : " + square.getArea());
+    System.out.println("The area of the area : " + square.getArea());
     System.out.println("The coordinates of centre of inscribed circle : " + square.getCentreCoordinatesOfInscribedCircle());
-    System.out.println("square and squareTwo are equals : " + square.equals(squareTwo));
+    System.out.println("area and squareTwo are equals : " + square.equals(squareTwo));
 
     System.out.println(circle);
     System.out.println("The area of the circle : " + circle.getArea());
