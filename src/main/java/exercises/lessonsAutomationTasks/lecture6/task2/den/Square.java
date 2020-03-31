@@ -1,6 +1,6 @@
 package exercises.lessonsAutomationTasks.lecture6.task2.den;
 
-import static java.lang.Math.PI;
+import java.util.Objects;
 
 public class Square extends Figures {
     private double sideLength;
@@ -10,10 +10,33 @@ public class Square extends Figures {
     }
 
     public double area() {
-        return sideLength*sideLength;
+        return sideLength * sideLength;
     }
 
     public double centerCoordinate() {
-        return sideLength/2;
+        return sideLength / 2;
+    }
+
+    @Override
+    public String toString() {
+        return "Square sideLength = " + sideLength;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Square square = (Square) o;
+        return Double.compare(square.sideLength, sideLength) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(sideLength);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
