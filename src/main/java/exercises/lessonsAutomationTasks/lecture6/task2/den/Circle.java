@@ -15,8 +15,9 @@ public class Circle extends Figures {
         return PI * radius * radius;
     }
 
-    public double centerCoordinate() {
-        return radius;
+    @Override
+    public CenterCoordinates centerCoordinate() {
+        return new CenterCoordinates(radius, radius);
     }
 
     @Override

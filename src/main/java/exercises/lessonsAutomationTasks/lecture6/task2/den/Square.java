@@ -13,8 +13,9 @@ public class Square extends Figures {
         return sideLength * sideLength;
     }
 
-    public double centerCoordinate() {
-        return sideLength / 2;
+    @Override
+    public CenterCoordinates centerCoordinate() {
+        return new CenterCoordinates(sideLength/2,sideLength/2);
     }
 
     @Override
