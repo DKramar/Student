@@ -4,9 +4,13 @@ import java.util.Objects;
 
 public class Square extends Figures {
     private double sideLength;
+    private double axisOffsetX;
+    private double axisOffsetY;
 
-    public Square(double sideLength) {
+    public Square(double sideLength, double axisOffsetX, double axisOffsetY) {
         this.sideLength = sideLength;
+        this.axisOffsetX = axisOffsetX;
+        this.axisOffsetY = axisOffsetY;
     }
 
     public double area() {
@@ -15,8 +19,16 @@ public class Square extends Figures {
 
     @Override
     public CenterCoordinates centerCoordinate() {
-        return new CenterCoordinates(sideLength/2,sideLength/2);
+        CenterCoordinates result = new CenterCoordinates();
+        result.setX(this.axisOffsetX + (sideLength / 2));
+        result.setY(this.axisOffsetY + (sideLength / 2));
+        return result;
     }
+
+    /*@Override
+    public CenterCoordinates centerCoordinate() {
+        return new CenterCoordinates(axisOffsetX+(sideLength/2),axisOffsetY+(sideLength/2));
+    }*/
 
     @Override
     public String toString() {

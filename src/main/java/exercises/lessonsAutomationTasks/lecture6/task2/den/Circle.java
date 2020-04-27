@@ -6,9 +6,13 @@ import static java.lang.Math.PI;
 
 public class Circle extends Figures {
     private double radius;
+    private double axisOffsetX;
+    private double axisOffsetY;
 
-    public Circle(double radius) {
+    public Circle(double radius, double axisOffsetX, double axisOffsetY) {
         this.radius = radius;
+        this.axisOffsetX = axisOffsetX;
+        this.axisOffsetY = axisOffsetY;
     }
 
     public double area() {
@@ -17,8 +21,16 @@ public class Circle extends Figures {
 
     @Override
     public CenterCoordinates centerCoordinate() {
-        return new CenterCoordinates(radius, radius);
+        CenterCoordinates result = new CenterCoordinates();
+        result.setX(this.axisOffsetX);
+        result.setY(this.axisOffsetY);
+        return result;
     }
+
+    /*@Override
+    public CenterCoordinates centerCoordinate() {
+        return new CenterCoordinates(axisOffsetX, axisOffsetY);
+    }*/
 
     @Override
     public String toString() {
