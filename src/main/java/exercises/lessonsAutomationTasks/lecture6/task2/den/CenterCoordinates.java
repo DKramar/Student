@@ -34,8 +34,4 @@ public class CenterCoordinates {
     public String toString() {
         return "x = " + x + ", " + "y = " + y;
     }
-
-    public static void string() {
-
-    }
 }
