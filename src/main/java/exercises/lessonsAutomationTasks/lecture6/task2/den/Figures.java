@@ -4,5 +4,5 @@ public abstract class Figures {
 
     public abstract double area();
 
-    public abstract CenterCoordinates centerCoordinate();
+    public abstract Point centerCoordinate();
 }

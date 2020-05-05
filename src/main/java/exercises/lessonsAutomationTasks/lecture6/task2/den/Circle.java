@@ -2,52 +2,50 @@ package exercises.lessonsAutomationTasks.lecture6.task2.den;
 
 import java.util.Objects;
 
-import static java.lang.Math.PI;
-
 public class Circle extends Figures {
-    private double radius;
-    private double axisOffsetX;
-    private double axisOffsetY;
+    private Point axisOffsetXYPoint1;
+    private Point axisOffsetXYPoint2;
 
-    public Circle(double radius, double axisOffsetX, double axisOffsetY) {
-        this.radius = radius;
-        this.axisOffsetX = axisOffsetX;
-        this.axisOffsetY = axisOffsetY;
+    public Circle(Point axisOffsetXYPoint1, Point axisOffsetXYPoint2) {
+        this.axisOffsetXYPoint1 = axisOffsetXYPoint1;
+        this.axisOffsetXYPoint2 = axisOffsetXYPoint2;
+    }
+
+    public double radius() {
+        double diameter = Math.sqrt(Math.pow(axisOffsetXYPoint2.getX() - axisOffsetXYPoint1.getX(), 2)
+                + Math.pow(axisOffsetXYPoint2.getY() - axisOffsetXYPoint1.getY(), 2));
+        return diameter / 2;
     }
 
     public double area() {
-        return PI * radius * radius;
+        return Math.PI * Math.pow(radius(), 2);
     }
 
     @Override
-    public CenterCoordinates centerCoordinate() {
-        CenterCoordinates result = new CenterCoordinates();
-        result.setX(this.axisOffsetX);
-        result.setY(this.axisOffsetY);
+    public Point centerCoordinate() {
+        Point result = new Point();
+        result.setX((axisOffsetXYPoint1.getX() + axisOffsetXYPoint2.getX()) / 2);
+        result.setY((axisOffsetXYPoint1.getY() + axisOffsetXYPoint2.getY()) / 2);
         return result;
     }
 
-    /*@Override
-    public CenterCoordinates centerCoordinate() {
-        return new CenterCoordinates(axisOffsetX, axisOffsetY);
-    }*/
-
     @Override
     public String toString() {
-        return "Circle radius = " + radius;
+        return "Circle radius = " + radius();
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Circle)) return false;
         Circle circle = (Circle) o;
-        return Double.compare(circle.radius, radius) == 0;
+        return axisOffsetXYPoint1.equals(circle.axisOffsetXYPoint1) &&
+                axisOffsetXYPoint2.equals(circle.axisOffsetXYPoint2);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(radius);
+        return Objects.hash(axisOffsetXYPoint1, axisOffsetXYPoint2);
     }
 
     @Override
