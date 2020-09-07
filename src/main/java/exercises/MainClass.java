@@ -1,3 +1,4 @@
+/*
 package exercises;
 
 import org.openqa.selenium.Dimension;
@@ -31,3 +32,4 @@ public class MainClass {
         driver.quit(); // метод который закрывает драйвер после его работы
     }
 }
+*/

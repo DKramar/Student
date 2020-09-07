@@ -1,4 +1,6 @@
+/*
 package javarush.syntax.level8;
+*/
 /*
 Создать словарь (Map<String, String>) занести в него десять записей по принципу "фамилия" - "имя".
 Удалить людей, имеющих одинаковые имена.
@@ -9,7 +11,8 @@ package javarush.syntax.level8;
 •	Метод createMap() должен создавать и возвращать словарь Map с типом элементов String, String состоящих из 10 записей.
 •	Метод removeTheFirstNameDuplicates() должен удалять из словаря всех людей, имеющие одинаковые имена.
 •	Метод removeTheFirstNameDuplicates() должен вызывать метод removeItemFromMapByValue().
- */
+ *//*
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -57,3 +60,4 @@ public class MapAddAndRemoveNames {
 
     }
 }
+*/

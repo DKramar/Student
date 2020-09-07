@@ -1,3 +1,4 @@
+/*
 package exercises.lessonsAutomationTasks.lecture9.task1;
 
 import java.util.ArrayList;
@@ -12,3 +13,4 @@ public class Demo {
         System.out.printf("circle_1 coordinate center: %s%n", package1.toString());
     }
 }
+*/

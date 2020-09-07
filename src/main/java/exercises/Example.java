@@ -1,3 +1,4 @@
+/*
 package exercises;
 
 import org.junit.BeforeClass;
@@ -43,3 +44,4 @@ public class Example {
     }
 }
 
+*/
