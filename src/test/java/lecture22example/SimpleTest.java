@@ -14,13 +14,13 @@ public class SimpleTest {
     @Test
     public void simpleTest() {
 //        Указываем путь к исполнительному файлу драйвера браузера и иниыциализируем WebDriver
-        System.setProperty("webdriver.chrome.driver", "D:\\GD\\Student\\GchDriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\Java-education-for-qa\\Student\\GchDriver\\chrome94\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 //       Открываем браузер на нужной странице
-        driver.get("http://automationpractice.com/index.php");
+        driver.get("https://faculty-qa.cengage.com/");
 
 //        Выполняем логин пользователя
         WebElement signIn_link = driver.findElement(By.partialLinkText("Sign in"));
