@@ -1,4 +1,4 @@
-
+package automationprojectstudytasks;
 
 import org.junit.*;
 import org.junit.rules.TestWatcher;

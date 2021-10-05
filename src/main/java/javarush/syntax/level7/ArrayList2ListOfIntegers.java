@@ -1,7 +1,10 @@
+/*
 package javarush.syntax.level7;
+*/
 /*
 Ввод списка целых чисел с клавиатуры
- */
+ *//*
+
 
 import javafx.scene.control.Tab;
 
@@ -35,3 +38,4 @@ public class ArrayList2ListOfIntegers {
         System.out.println("------------------------------------------------------");
     }
 }
+*/
