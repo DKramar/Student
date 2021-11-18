@@ -1,4 +1,4 @@
-package exercises.oopTasks;
+package exercises.oop.rectangle;
 
 public class Point {
     public int x; // обьявил ПОЛЕ x

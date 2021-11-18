@@ -1,4 +1,4 @@
-package exercises.oopTasks;
+package exercises.oop.rectangle;
 
 public class MyClass {
     public static void main(String[] args) {
